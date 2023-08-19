@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;400;500;700&family=Bellefair&display=swap');
+
+
+body{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: linear-gradient(to top,rgba(254, 254, 254,.1) 8%,rgba(0, 0, 0,0.75) 92%), url(../assets/Chambres/ch-background.jpg);
+    width: 100vw;
+}
+
+.header > header{
+    font-size: 1.75rem;
+    font-family: 'Barlow Condensed';
+    animation: appparition .6s cubic-bezier(0.42, 0, 0.37, 1.01) forwards;
+    opacity: 0;
+}
+.header > header > span{
+    color: #979797;
+}
+.img-container{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 80%;
+    height: 170px;
+    margin : 32px auto 0 auto;
+    transition: background-image .6s cubic-bezier(0.175, 0.885, 0.32, 1.275), transform .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.container{
+    margin-top: 88px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 40%, auto );
+}
+header{
+
+    text-align: center;
+    font-family: "Barlow Condensed";
+    text-transform: uppercase;
+}
+.header{
+    background-color: transparent;
+}
+header > span{
+    margin-right: 18px;
+}
+.destination-header{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 32px auto;
+}
+ul.destination-header > li{
+text-transform : uppercase;
+position: relative;
+overflow: visible;
+list-style: none;
+cursor : pointer;
+}
+.destination-header > li >div{
+    width:0;
+    height: 3px;
+    position:absolute;
+    bottom:0;
+    top:100%;
+    z-index:10;
+    background-color: #fefefe;
+    transition: width .3s, opacity .3s;
+    transform-origin: center center;
+}
+.title{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+.destination-lib{
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 0.94rem;
+    color: #D0D6F9;  
+}
+.footer{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fill, auto);
+    margin-bottom: 58px;
+}
+.footer > div{
+    text-align: center;
+    margin: 32px 0;
+}
+.footer > span{
+    display: block;
+    margin:16px 0;
+    text-align:center;
+    font-family: "Bellefair", sans-serif;
+    font-size: 1.75rem;
+    font-weight: 200;
+}
+.footer > div >h2{
+    font-size : 0.875rem;
+    font-family: sans-serif;
+    margin-bottom: 12px;
+    color :#D0D6F9;
+    text-transform: uppercase;
+    letter-spacing: 2.36px;
+    font-weight: 200;
+    animation: appparition .6s cubic-bezier(0.42, 0, 0.37, 1.01) forwards;
+    opacity: 0;
+}
+.spacing{
+    width:80%;
+    height:2px;
+    background-color:#979797;
+    margin: 32px auto 0 auto;
+}
+li > div.active{
+    opacity:1;
+    width :100%
+}
+
+@keyframes appparition {
+    to{
+        opacity: 1;
+    }
+}
+@media  screen and (min-width:650px){
+
+    .footer{
+        grid-template-columns: repeat(2, 216px);
+        grid-template-rows: 1fr;
+        margin-bottom: 62px;
+        justify-content: center;
+
+    }
+    .destination-header{
+        margin-top: 53px;
+        justify-content: center;
+    }
+    .destination-header > li{
+        margin-right: 36px;
+    }
+    .title{
+        margin-bottom: 8px;
+        font-size: 5rem;
+        font-weight: 300;
+    }
+    .spacing{
+        margin-top: 49px;
+    }
+    .destination-lib{
+        width: 40%;
+    }
+    .header > header{
+        text-align: start;
+    }
+    .header{
+        padding: 2.7rem;
+    }
+}
+@media  (min-width: 1300px) {
+
+    .container{
+        grid-template-columns: 1fr 35%;
+        grid-template-rows: 1fr;
+        margin-top: 120px;
+    }
+    .header > header{
+        margin-bottom: 30px;
+    }
+    .footer{
+        justify-content: start;
+
+    }
+    .footer > div{
+        text-align: start;
+    }
+    .footer > div > span{
+        font-size: 1.45rem;
+    }
+    .footer > div > h2{
+        font-size: 0.875rem;
+    }
+    .destination-lib{
+        margin-left: 0;
+        text-align: start;
+        width: 80%;
+        font-size: 1.25rem;
+    }
+    .destination-header{
+        margin-left:0;
+        justify-content: start;
+    }
+    .destination-header > li{
+        margin-right: 36px;
+    }
+    .title{
+        text-align: start;
+    }
+    .spacing{
+        margin-left: 0;
+    }
+    .img-container{
+        width: 70%;
+        height: 80%;
+        margin-top: 0;
+    }
+}
