@@ -9,6 +9,11 @@ body{
     color: #fefefe;
     border:none;
     overflow-x: hidden;
+    position: relative;
+}
+
+div.container{
+    overflow-x: hidden;
 }
 *{
     margin: 0;
